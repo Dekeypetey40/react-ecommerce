@@ -12,9 +12,10 @@ function ListGroup() {
   return (
     <>
       <h1>List</h1>
+      {items.length === 0 && <p>There are no items in the list</p>}
       <ul className="list-group">
         {items.map((item) => (
-          <li>{item}</li>
+          <li key={item}>{item}</li>
         ))}
       </ul>
     </>
